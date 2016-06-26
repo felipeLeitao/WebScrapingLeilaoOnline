@@ -1,0 +1,1 @@
+C:\projects\NetCoders.WebScrapping\NetCoders.WebScrapping\bin\Debug\NetCoders.WebScrapping.exe.config
