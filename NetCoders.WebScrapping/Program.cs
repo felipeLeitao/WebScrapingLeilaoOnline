@@ -46,7 +46,20 @@ namespace NetCoders.WebScrapping
                 {
                     var urlImagem = item.SelectSingleNode("./div[1]/img").Attributes["src"].Value;
 
+                    var dataFinalTexto = item.SelectSingleNode("./div[2]/h1").InnerText.Substring(0, 10);
 
+                    var dataFinal = Convert.ToDateTime(dataFinalTexto);
+
+                    //Vou remover o h1, pra ficar mais fácil de capturar o texto dentro da div
+                    item.SelectSingleNode("./div[2]/h1").Remove();
+
+                    var descricao = item.SelectSingleNode("./div[2]").InnerText.Trim();
+
+                    var campoValorInicial = item.SelectSingleNode("./div[3]/div[1]").InnerText.Split(':').Last().Trim();
+
+                    var moeda = campoValorInicial.Split(' ').First();
+
+                    var valorInicial = Convert.ToDecimal(campoValorInicial.Split(' ').Last());
                 }
             }
 
