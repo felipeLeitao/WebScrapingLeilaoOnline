@@ -7,3 +7,7 @@ C:\projects\NetCoders.WebScrapping\NetCoders.WebScrapping\bin\Debug\HtmlAgilityP
 C:\projects\NetCoders.WebScrapping\NetCoders.WebScrapping\obj\Debug\NetCoders.WebScrapping.csprojResolveAssemblyReference.cache
 C:\projects\NetCoders.WebScrapping\NetCoders.WebScrapping\obj\Debug\NetCoders.WebScrapping.exe
 C:\projects\NetCoders.WebScrapping\NetCoders.WebScrapping\obj\Debug\NetCoders.WebScrapping.pdb
+C:\projects\NetCoders.WebScrapping\NetCoders.WebScrapping\bin\Debug\EntityFramework.dll
+C:\projects\NetCoders.WebScrapping\NetCoders.WebScrapping\bin\Debug\EntityFramework.SqlServer.dll
+C:\projects\NetCoders.WebScrapping\NetCoders.WebScrapping\bin\Debug\EntityFramework.xml
+C:\projects\NetCoders.WebScrapping\NetCoders.WebScrapping\bin\Debug\EntityFramework.SqlServer.xml
