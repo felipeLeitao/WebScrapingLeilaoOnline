@@ -26,9 +26,24 @@ namespace NetCoders.WebScrapping
             //Aqui estamos pegando a div que contem todos os quadradinhos que informam as páginas
             var divListaLotesPaginacao = paginaPrincipal.SelectSingleNode("//*[@id='listaLotesPaginacao']");
 
-            var ultimaPagina = divListaLotesPaginacao.SelectNodes("./ul/li").Last().SelectSingleNode("./span").InnerText;
+            var ultimaPaginaTexto = divListaLotesPaginacao.SelectNodes("./ul/li").Last().SelectSingleNode("./span").InnerText;
 
+            var ultimaPagina = Convert.ToInt16(ultimaPaginaTexto);
 
+            //Aqui no lugar 2, deveriamos colocar a variavel ultimaPagina,
+            //não vamos colocar porquê a internet é ruim (vivo)
+            for (int i = 1; i <= 2; i++)
+            {
+                var urlCorrente = "/homesite/filtro.asp?q=materiais&txBuscar=088&CodSubCategoria=&SubCategoria=&UF=&CodCondicao=&Condicao=&OptValores=0&LblValores=&pagina=" + i;
+
+                var paginaCorrente = client.Load(baseUrl + urlCorrente, "GET").DocumentNode;
+
+                var listaItens = paginaCorrente.SelectSingleNode("//*[@id='listaLotes']").SelectNodes("./ul/li");
+
+                Console.WriteLine(listaItens.Count);
+            }
+
+            Console.ReadKey();
         }
     }
 }
