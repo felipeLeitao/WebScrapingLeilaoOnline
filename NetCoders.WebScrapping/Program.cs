@@ -40,7 +40,14 @@ namespace NetCoders.WebScrapping
 
                 var listaItens = paginaCorrente.SelectSingleNode("//*[@id='listaLotes']").SelectNodes("./ul/li");
 
-                Console.WriteLine(listaItens.Count);
+                Console.WriteLine("Linhas encontradas: " + listaItens.Count);
+
+                foreach (var item in listaItens)
+                {
+                    var urlImagem = item.SelectSingleNode("./div[1]/img").Attributes["src"].Value;
+
+
+                }
             }
 
             Console.ReadKey();
